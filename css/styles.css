@@ -60,6 +60,9 @@ body{
     padding-right: 30px;
 
 }
+#content{
+    padding: 10px;
+}
 #posts{
     width: 60%;
     float: left;
@@ -112,7 +115,22 @@ body{
     color: #333;
     background: url("/img/lines.png") repeat-x;
 }
+#sidebar h4 span{
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+}
 #sidebar img{
-    width:100%;
+    width:94%;
     margin-bottom: 10px;
+    margin-left: 3%;
+    margin-right: 3% ;
+    border-radius: 10px;
+}
+#sidebar p{
+    font-size: 15px;
+    text-align: justify;
+}
+#about{
+    margin: 0px auto;
 }
