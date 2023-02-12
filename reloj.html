@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reloj</title>
+    <script type="text/javascript">
+        function reloadReloj() {
+
+            let campo = document.getElementById("reloj");
+            let campoFecha = document.getElementById('fecha');
+
+            let horaActual = new Date();
+            let hora = horaActual.getHours();
+            let minuto = horaActual.getMinutes();
+            let segundo = horaActual.getSeconds();
+
+            let year = horaActual.getFullYear();
+            let month = horaActual.getMonth();
+            let month_day = horaActual.getDate();
+            let week_day = horaActual.getDay();
+
+            const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+            const days = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sábado']
+
+            segundo = (segundo.toString().length === 1 )? "0"+ segundo: segundo;
+            minuto = (minuto.toString().length === 1 )? "0"+ minuto: minuto;
+            hora = (hora.toString().length === 1 )? "0"+ hora: hora;
+
+            let mostrarHora = hora+":"+minuto+":"+segundo;
+
+            campo.innerText = `${mostrarHora}`;
+            campoFecha.innerText= `${days[week_day]}, ${month_day} - ${months[month]} - ${year}`;
+            console.log(mostrarHora);
+
+            setTimeout("reloadReloj()",1000);
+
+        }
+    </script>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            border-radius: 30px;
+            text-align: center;
+            background:skyblue;
+        }
+        .fecha{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:x-large;
+            font-weight: bold;
+            margin: 0px  auto;
+            margin-top: 20px;
+            background:steelblue;
+            border:teal 5px solid;
+            border-radius: 20px;
+            width: 350px;
+            padding: 15px;
+        }
+    </style>
+    <link rel="stylesheet" href="">
+</head>
+<body onload="reloadReloj()">
+    <div class="fecha">
+        <span id="fecha"></span>
+        <br>
+        <span id="reloj"></span>
+    </div>
+    
+</body>
+</html>
