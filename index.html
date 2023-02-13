@@ -5,8 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto con javascript</title>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!--Estilos CSS-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!--CSS Slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!--javaScript-->
+    <script type="text/javascript" src="js/main.js"></script>
+  
 </head>
 <body>
     <section id="global">
@@ -19,7 +27,7 @@
             <nav id="menu">
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="/reloj.html">Reloj</a></li>
+                    <li><a href="reloj.html">Reloj</a></li>
                     <li><a href="#">Juego</a></li>
                     <li><a href="#">Sobre mi</a></li>
                     <li><a href="#">Contacto</a></li>
@@ -27,8 +35,10 @@
             </nav>
         </header>
         <!--Slider-->
-        <div id="slider">
-
+        <div id="slider" class="slider">
+            <div><img src="img/cielo.jpg" alt="Cielo"></div>
+            <div><img src="img/hojas.jpg" alt="Hojas"></div>
+            <div><img src="img/rojo.jpg" alt="Hojas de otoño"></div>
         </div>
         <!--Contenido-->
         <section id="content">
@@ -67,7 +77,7 @@
             <aside id="sidebar">
                 <div id="about">
                     <h4><span>¿Quien soy?</span></h4>
-                    <img src="/img/caracol.jpg" alt="imagen de caracol">
+                    <img src="img/caracol.jpg" alt="imagen de caracol">
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                          Ipsam ut reiciendis ea itaque modi illo veniam obcaecati,

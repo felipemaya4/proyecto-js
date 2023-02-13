@@ -113,7 +113,7 @@ body{
     text-align: center;
     line-height: 10px;
     color: #333;
-    background: url("/img/lines.png") repeat-x;
+    background: url("img/lines.png") repeat-x;
 }
 #sidebar h4 span{
     background: white;
@@ -165,4 +165,7 @@ footer{
     padding-right: 20px;
     margin-top: 20px;
     line-height: 50px;
+}
+.x-viewport{
+    height: 250px !important;
 }
