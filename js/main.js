@@ -5,7 +5,8 @@ $(document).ready(function(){
         slideWidth: 1000,
         auto: true,
         stopAutoOnClick: true,
-        pager: true,
+        responsive: true,
+        pager: true
     });
     console.log("hola mundo");
 });
