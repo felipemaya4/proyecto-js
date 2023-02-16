@@ -16,22 +16,22 @@ $(document).ready(function(){
     let posts = [
         {
             title: 'prueba de titulo4',
-            date: moment().format('MMMM Do YYYY, h:mm:ss a'),
+            date: 'Publicado el '+moment().format('lll'),
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicingelit. Possimus odio, impedit, earum facilis rerum nam omnis autem, expedita recusandae quo mollitia! Consectetur aut laboriosam, totam officiis inventore possimus aperiam eius? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aliquam facilis quam vero aliquid, officia veniam, voluptatibus harum, debitis qui quisquam laboriosam tempora ipsam excepturi natus exercitationem cumque fuga ad'
         },
         {
             title: 'prueba de titulo1',
-            date: moment().format('MMMM dddd YYYY, h:mm:ss a'),
+            date: 'Publicado el '+moment().format('lll'),
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicingelit. Possimus odio, impedit, earum facilis rerum nam omnis autem, expedita recusandae quo mollitia! Consectetur aut laboriosam, totam officiis inventore possimus aperiam eius? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aliquam facilis quam vero aliquid, officia veniam, voluptatibus harum, debitis qui quisquam laboriosam tempora ipsam excepturi natus exercitationem cumque fuga ad'
         },
         {
             title: 'prueba de titulo2',
-            date: moment().format('MMMM Do YYYY, h:mm:ss a'),
+            date: 'Publicado el '+moment().format('lll'),
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicingelit. Possimus odio, impedit, earum facilis rerum nam omnis autem, expedita recusandae quo mollitia! Consectetur aut laboriosam, totam officiis inventore possimus aperiam eius? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aliquam facilis quam vero aliquid, officia veniam, voluptatibus harum, debitis qui quisquam laboriosam tempora ipsam excepturi natus exercitationem cumque fuga ad'
         },
         {
             title: 'prueba de titulo3',
-            date: moment().format('MMMM Do YYYY, h:mm:ss a'),
+            date: 'Publicado el '+moment().format('lll'),
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicingelit. Possimus odio, impedit, earum facilis rerum nam omnis autem, expedita recusandae quo mollitia! Consectetur aut laboriosam, totam officiis inventore possimus aperiam eius? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aliquam facilis quam vero aliquid, officia veniam, voluptatibus harum, debitis qui quisquam laboriosam tempora ipsam excepturi natus exercitationem cumque fuga ad'
         }
     ];
