@@ -6,10 +6,6 @@
     float:none;
     clear: both;
 }
-body{
-    background: url('../img/hojas.jpg');
-    background-attachment: fixed;
-}
 #global{
     width: 75%;
     max-width: 980px;
@@ -52,9 +48,6 @@ body{
     display: inline-block; /* pone la lista de manera horizontal*/
     transition: all 300ms;
 }
-#menu ul li:hover{
-    background: #235E30;
-}
 #menu a{
     display: block;
     color: white;text-decoration: none;
@@ -80,7 +73,6 @@ body{
     font-size: 30px;
     color: #333;   
 }
-
 .post .date{
     display: block;
     color: gray;
@@ -96,7 +88,6 @@ body{
     font-size: 14px;
     text-align: center;
     padding: 10px;
-    background: #235E30;
     color: aliceblue;
     text-decoration: none;
     margin-top: 10px;
@@ -175,4 +166,35 @@ footer{
 }
 .bx-viewport{
     height: 250px !important;
+}
+#selector-theme{
+    position: fixed;
+    top: 40%;
+    background: rgba(51, 51, 51, 0,5);
+    width: 50px;
+    height: 100px;
+}
+
+/* formato de estilos para crear el selector de temas */
+#to-green,
+#to-red,
+#to-blue{
+    width:  30px;
+    height: 30px;
+    border: 1px solid white;
+    display: block;
+    margin: auto 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+}
+#to-green{
+    background: #235E30;
+
+}
+#to-red{
+    background: #ca3413;
+}#to-blue{
+    background: #1f87c4;
 }
