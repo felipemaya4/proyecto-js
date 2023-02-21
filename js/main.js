@@ -58,7 +58,7 @@ $(document).ready(function(){
         </p>
         <a href="#"class="button-more" >leer más</a>
         </article> `;
-        console.log(articulo);
+        //console.log(articulo);
         $("#posts").append(articulo);
     });
    
@@ -70,16 +70,40 @@ $(document).ready(function(){
         theme.attr("href",localStorage.getItem("theme"));
     }
 
-    $("#to-green").click(function name(params) {
+    $("#to-green").click(function (params) {
         theme.attr("href", "css/green.css");
         localStorage.setItem("theme","css/green.css");
     });
-    $("#to-red").click(function name(params) {
+    $("#to-red").click(function (params) {
         theme.attr("href", "css/red.css");
         localStorage.setItem("theme","css/red.css");
     });
-    $("#to-blue").click(function name(params) {
+    $("#to-blue").click(function (params) {
         theme.attr("href", "css/blue.css");
         localStorage.setItem("theme","css/blue.css");
     });
+
+    // scroll ahcia arriba de la pagina
+    $(".subir").click(function (e) {
+        e.preventDefault();
+
+        $("html, body").animate({
+            scrollTop:0
+        }, 300)
+        
+        return false;
+    });
+
+    //login falso
+    $("#form-login").submit(function () {
+        let formName = $("#name").val();
+        localStorage.setItem("formName", formName);
+    });
+    
+    let formName = localStorage.getItem("formName");
+
+    if(formName !== null && formName !== "undefined"){
+        $("#about p").html(`<strong>Bienvenido, ${formName} </strong>`);
+        $("#login").hide();
+    }
 });
