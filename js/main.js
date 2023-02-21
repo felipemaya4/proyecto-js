@@ -66,10 +66,10 @@ $(document).ready(function(){
 
     // codigo selector de temas para la  pagina
     let theme = $("#theme"); // id del link que tiene el css del los colores del tema
-    if(localStorage.getItem("theme") !== null || localStorage.getItem("theme") !== undefined ){
-       theme.attr("href",localStorage.getItem("theme"));
-    }else{
+    if(localStorage.getItem("theme") == null || localStorage.getItem("theme") == undefined ){
         localStorage.setItem("theme","css/green.css");
+    }else{
+        theme.attr("href",localStorage.getItem("theme"));
     }
 
     $("#to-green").click(function name(params) {
