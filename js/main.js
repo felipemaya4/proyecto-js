@@ -62,8 +62,6 @@ $(document).ready(function(){
         $("#posts").append(articulo);
     });
    
-
-
     // codigo selector de temas para la  pagina
     let theme = $("#theme"); // id del link que tiene el css del los colores del tema
     if(localStorage.getItem("theme") == null || localStorage.getItem("theme") == undefined ){
@@ -75,16 +73,13 @@ $(document).ready(function(){
     $("#to-green").click(function name(params) {
         theme.attr("href", "css/green.css");
         localStorage.setItem("theme","css/green.css");
-
     });
     $("#to-red").click(function name(params) {
         theme.attr("href", "css/red.css");
         localStorage.setItem("theme","css/red.css");
-        
     });
     $("#to-blue").click(function name(params) {
         theme.attr("href", "css/blue.css");
         localStorage.setItem("theme","css/blue.css");
-        
     });
 });
