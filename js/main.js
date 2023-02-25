@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+    $('#logout').hide();
     //Slider
     $('.slider').bxSlider({
         mode: 'fade',
@@ -94,16 +95,38 @@ $(document).ready(function(){
         return false;
     });
 
-    //login falso
-    $("#form-login").submit(function () {
-        let formName = $("#name").val();
-        localStorage.setItem("formName", formName);
-    });
     
-    let formName = localStorage.getItem("formName");
 
-    if(formName !== null && formName !== "undefined"){
-        $("#about p").html(`<strong>Bienvenido, ${formName} </strong>`);
+    //login falso
+    $("#btn-login").click(function (e) {
+        // cancela el evento submit
+        e.preventDefault();
+        //toma el valor del campo name y almacena una variables en sessionstorage
+        let formName = $("#name").val();
+        sessionStorage.setItem("formName", formName);
+        // inserta un mensaje de bienvenido con el nombre, oculta la seccion de login y muestra una seccion con el boton de cerrar sesion
+        $("#logout p").html(`<strong>Bienvenido, ${formName} </strong>`);
+        $('#logout').show();
         $("#login").hide();
-    }
+
+    });
+    // toma el valor de la variable amacenada en sessionstorage para poder mostrar en pantalla
+    let formName = sessionStorage.getItem("formName");
+    // verifica si existe lavariable formName para poder tomar su valor
+    if(formName !== null && formName !== "undefined"){
+        // inserta un mensaje de bienvenido con el nombre, oculta la seccion de login y muestra una seccion con el boton de cerrar sesion
+        $("#logout p").html(`<strong>Bienvenido, ${formName} </strong>`);
+        $('#logout').show();
+        $("#login").hide();
+    } 
+    // oculta la seccion de cerrar sesion y vueleve laseccion de login 
+    $('#btn-logout').click(function(e){
+        e.preventDefault();
+
+        sessionStorage.removeItem('formName');
+        $('#login').show();
+        $('#logout').hide();
+    });
+
 });
+
