@@ -11,7 +11,7 @@ $(document).ready(function(){
         responsive: true,
         pager: true
     });
-    console.log("hola mundo");
+    //console.log("hola mundo");
     // posts
     moment.locale('es');
     let posts = [
@@ -96,11 +96,19 @@ $(document).ready(function(){
     });
 
     
-
+    let formulario = document.getElementById('form-login');
     //login falso
-    $("#btn-login").click(function (e) {
+    formulario.addEventListener('submit',function (e) {
         // cancela el evento submit
         e.preventDefault();
+        // se instancia un objeto FormData
+        let formulary = new FormData(formulario);
+        console.log('datos formulario', formulary);
+        //convirtiendo formData en JSON
+        const value = Object.fromEntries(formulary.entries());
+        const json =JSON.stringify(value, null, 2);
+        
+        console.log(json);
         //toma el valor del campo name y almacena una variables en sessionstorage
         let formName = $("#name").val();
         sessionStorage.setItem("formName", formName);
