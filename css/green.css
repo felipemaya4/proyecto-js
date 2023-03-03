@@ -12,3 +12,7 @@ body{
 .button-more{
     background: #235E30;
 }
+.background{
+    background: #235E30;
+    border: 1px solid #235E30;
+}
