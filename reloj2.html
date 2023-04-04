@@ -7,17 +7,18 @@
     <title>Proyecto con javascript</title>
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
     <!--Estilos CSS-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link id="theme" rel="stylesheet" type="text/css" href="css/green.css">
-    <!--CSS Slider-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <!--javaScript-->
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/posts.js"></script>
+    
+    <!--moment.js-->
     <script type="text/javascript" src="js/moment.js"></script>
     <script type="text/javascript" src="js/moment-locale.js"></script>
+    <!--javaScript-->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/reloj2.js"></script>
+    
 </head>
 <body>
     <!--maquetado para crear los botones cambio de tema de la pagina-->
@@ -43,18 +44,14 @@
                 </ul>
             </nav>
         </header>
-        <!--Slider-->
-        <div id="content-Slider" >
-            <div id="slider" class="slider">
-                <div><img src="img/cielo.jpg" alt="Cielo"></div>
-                <div><img src="img/hojas.jpg" alt="Hojas"></div>
-                <div><img src="img/rojo.jpg" alt="Hojas de otoño"></div>
-            </div>    
-        </div>
+
         <!--Contenido-->
         <section id="content">
-            <div id="posts">
-                <!--carga posts desde archivo json-->
+            <div id="box">
+                <!--reloj-->
+                <div id="reloj">
+
+                </div>
             </div>
             <aside id="sidebar">
                 <div id="about">

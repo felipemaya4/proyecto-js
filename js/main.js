@@ -139,9 +139,18 @@ $(document).ready(function(){
         $('#login').show();
         $('#logout').hide();
     });
-
+    //Acordeon si existe al ruta about.html
     if(window.location.href.indexOf('about')> -1){
         $('#acordeon').accordion();
+    }
+
+    //Reloj si existe la ruta reloj2.html
+    if(window.location.href.indexOf('reloj2')> -1){
+        let reloj;
+            setInterval(()=>{
+                reloj = moment().format("hh:mm:ss");
+                $('#reloj').html(reloj);
+            }, 1000);
     }
 
 });
